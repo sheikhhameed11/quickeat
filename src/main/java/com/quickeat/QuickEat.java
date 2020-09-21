@@ -1,13 +1,13 @@
-package com.user;
+package com.quickeat;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UserMain {
+public class QuickEat {
 
 	public static void main(String[] args) {
 		
-		SpringApplication.run(UserMain.class, args);
+		SpringApplication.run(QuickEat.class, args);
 	}	
 }

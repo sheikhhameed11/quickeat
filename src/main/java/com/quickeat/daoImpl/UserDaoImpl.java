@@ -1,3 +1,4 @@
+package com.quickeat.daoImpl;
 //package com.user.daoImpl;
 //
 //import com.user.dao.UserDao;

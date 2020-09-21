@@ -1,3 +1,4 @@
+package com.quickeat.dao;
 //package com.user.dao;
 //
 //import com.user.model.RegisterEntity;

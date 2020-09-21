@@ -1,4 +1,4 @@
-package com.user.model;
+package com.quickeat.model;
 
 import java.time.LocalDateTime;
 
@@ -22,13 +22,13 @@ import com.sun.istack.NotNull;
  */
 @Entity
 @Table(name = "Users")
-public class RegisterEntity {
+public class Users {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO, generator="native")
-	@GenericGenerator(name = "native",strategy = "native")
-	@Column(name = "userid") 
-	private Integer userId;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+//	@GenericGenerator(name = "native",strategy = "native")
+	@Column(name = "id") 
+	private Integer Id;
 
 	@Column(name = "name")
 	@NotNull
@@ -89,7 +89,7 @@ public class RegisterEntity {
 	/**
 	 * Default Constructor
 	 */
-	public RegisterEntity() {
+	public Users() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -97,7 +97,7 @@ public class RegisterEntity {
 	/**
 	 * Entity object with constructor with object
 	 * 
-	 * @param userId
+	 * @param Id
 	 * @param name
 	 * @param email
 	 * @param emailVerifiedat
@@ -115,12 +115,12 @@ public class RegisterEntity {
 	 * @param itemId
 	 * @param status
 	 */
-	public RegisterEntity(Integer userId, String name, String email, LocalDateTime emailVerifiedat, String password,
+	public Users(Integer Id, String name, String email, LocalDateTime emailVerifiedat, String password,
 			String rememberToken, LocalDateTime createdAt, LocalDateTime updatedAt, String authToken, String phone,
 			Integer defaultAddrId, String deliveryPin, Integer deliveryGuyDetailId, String avatar, Integer restaurantId,
 			String itemId, String status) {
 		super();
-		this.userId = userId;
+		this.Id = Id;
 		this.name = name;
 		this.email = email;
 		this.emailVerifiedat = emailVerifiedat;
@@ -144,17 +144,17 @@ public class RegisterEntity {
 	 * 
 	 * @return
 	 */
-	public Integer getUserId() {
-		return userId;
+	public Integer getId() {
+		return Id;
 	}
 
-//	/**
-//	 * This will set userId 
-//	 * @param userId
-//	 */
-//	public void setUserId(Integer userId) {
-//		this.userId = userId;
-//	}
+	/**
+	 * This will set Id 
+	 * @param Id
+	 */
+	public void setId(Integer Id) {
+		this.Id = Id;
+	}
 
 	public String getName() {
 		return name;
@@ -286,7 +286,7 @@ public class RegisterEntity {
 
 	@Override
 	public String toString() {
-		return "RegisterEntity [userId=" + userId + ", name=" + name + ",email=" + email + ", emailVerifiedat="
+		return "RegisterEntity [Id=" + Id + ", name=" + name + ",email=" + email + ", emailVerifiedat="
 				+ emailVerifiedat + ", password=" + password + ", rememberToken=" + rememberToken + ", createdAt="
 				+ createdAt + ", updatedAt=" + updatedAt + ", authToken=" + authToken + ", phone=" + phone
 				+ ", defaultAddrId=" + defaultAddrId + ", deliveryPin=" + deliveryPin + ", deliveryGuyDetailId="

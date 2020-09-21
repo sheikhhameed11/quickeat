@@ -1,4 +1,4 @@
-package com.user.configuration;
+package com.quickeat.configuration;
 
 import java.util.Collections;
 
@@ -22,9 +22,9 @@ public class SwaggerConfig {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select()
 				.apis(RequestHandlerSelectors.basePackage("com.user.controller"))
-				.paths(PathSelectors.regex("/user/.*"))
-				.build()
-				.apiInfo(metaData());
+				.paths(PathSelectors.any())
+				.build();
+//				.apiInfo(metaData());
 				
 	}
 

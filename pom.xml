@@ -6,11 +6,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com</groupId>
-	<artifactId>RegistrationApi</artifactId>
+	<artifactId>QuickEatApi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>UserApi Maven Webapp</name>
+	<name>QuickEatApi Maven Webapp</name>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
 
@@ -25,6 +25,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<java.version>1.8</java.version>
+		<spring.boot.version>2.2.2.RELEASE</spring.boot.version>
 	</properties>
 
 
@@ -32,12 +33,14 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.datatype</groupId>
 			<artifactId>jackson-datatype-jsr310</artifactId>
+<!-- 			<version>${spring.boot.version}</version> -->
 		</dependency>
 		<dependency>
 
 
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
+			<version>${spring.boot.version}</version>
 			<scope>runtime</scope>
 		</dependency>
 
@@ -45,14 +48,17 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<version>${spring.boot.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-freemarker</artifactId>
+			<version>${spring.boot.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<version>${spring.boot.version}</version>
 		</dependency>
 
 		<dependency>
@@ -73,19 +79,19 @@
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
 			<version>2.9.2</version>
-			<scope>compile</scope>
+<!-- 			<scope>compile</scope> -->
 		</dependency>
 
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>2.9.2</version>
-			<scope>compile</scope>
+<!-- 			<scope>compile</scope> -->
 		</dependency>
 	</dependencies>
 
 	<build>
-		<finalName>UserApi</finalName>
+		<finalName>QuickEatApi</finalName>
 
 		<plugins>
 			<plugin>
@@ -102,6 +108,10 @@
 					</archive>
 				</configuration>
 			</plugin>
+			<plugin>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-maven-plugin</artifactId>
+    </plugin>
 		</plugins>
 	</build>
 </project>

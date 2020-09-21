@@ -1,4 +1,4 @@
-package com.user.exception;
+package com.quickeat.exception;
 
 import java.time.LocalDateTime;
 
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import com.user.model.ResponseData;
+import com.quickeat.model.ResponseData;
 
 @ControllerAdvice
 public class CustomException{

@@ -1,4 +1,4 @@
-package com.user.model;
+package com.quickeat.model;
 
 import java.time.LocalDateTime;
 
